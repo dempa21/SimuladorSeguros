@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <title>Calculadora Seguro de Auto</title>
+  
+    <style>
+
+        /* Loading...... */
+.square {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background-color: #e6d9d9; }
+
+.load-7 {
+  position: absolute;
+  background: #199cf7;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0;
+  z-index: -1;
+  animation: closeLoading 2s; }
+  .load-7 .square {
+    animation: loadingG 1.5s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite; }
+
+@keyframes loadingG {
+  0% {
+    transform: translate(0, 0) rotate(0deg); }
+  50% {
+    transform: translate(70px, 0) rotate(360deg); }
+  100% {
+    transform: translate(0, 0) rotate(0deg); } }
+
+@keyframes closeLoading {
+  0% {
+    opacity: 1;
+    z-index: 3; }
+  70% {
+    z-index: 3;
+    opacity: 1; }
+  98% {
+    z-index: 3;
+    opacity: 0; }
+  100% {
+    z-index: -1; } }
+
+        body {
+            background-color: yellow;
+            font-family: 'Trebuchet MS';
+        }
+          
+        h1 {
+            font-size: 35px;
+        }
+          
+        h1 {
+            font-size: 21px;
+            margin-top: 20px;
+        }
+          
+        .boton {
+            background-color: #FFF;
+        }
+        .calculator {
+            width: 400px;
+            height: 450px;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            padding: 20px 0px 0px 100px;
+            border-radius: 50px;
+            color: white;
+        }
+
+        #divInicial {
+            width: 400px;
+            height: 450px;
+            background-color: coral;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            padding: 20px 0px 0px 100px;
+            border-radius: 50px;
+            color: white;
+            display: flex;
+        }
+
+        #formulario {
+            position: relative;
+            top: 250px;
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            padding: 1em;
+            box-sizing: border-box;
+        }
+          
+        input {
+            padding: 7px;
+            width: 70%;
+            margin-top: 7px;
+        }
+    </style>
+</head>
+  <!-- Loading.... -->
+  <div class="load-7">
+    <div>
+        <h2>Cargando...</h2>
+        <div class="square-holder">
+            <div class="square"></div>
+        </div>
+    </div>
+</div>
+<!-- Fin -->
+<body>
+    <div id="divInicial">
+        <h2 id="titulo">BIENVENIDO A CALCULADORA DE PRIMA DE SEGUROS DE AUTO, INGRESA TUS DATOS</h2>
+        <form id="formulario">
+        Nombre: <input type="text" name="nombre" id="nombre" /> 
+        Apellido: <input type="text" name="apellido" id="apellido" />
+        <button id="ingresar">INGRESAR</button>
+        </form>
+      </div>
+    <div id="calculator"></div>
+    <script src="index.js"></script>
+</body>
+  
+</html>    
